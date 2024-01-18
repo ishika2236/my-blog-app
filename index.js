@@ -33,14 +33,12 @@ app.post('/form',(req,res)=>{
 
 
 
-app.post('/',(req,res)=>{
+app.post('/', (req, res) => {
     console.log('Received POST request to /article');
-    // res.send("ok");
-    var artData={
-        t:req.body["title"],
-        m:req.body.markdown,
-        d:req.body.description,
+    var artData = {
+        t: req.body["title"],
+        m: req.body.markdown,
+        d: req.body.description,
     }
-    
-    res.render("index.ejs",artData);
-})
+    res.render("index.ejs", { artData: artData }); // Pass artData to the template
+});

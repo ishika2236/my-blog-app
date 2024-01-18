@@ -273,7 +273,7 @@ input{
     background-color: #d9d9d9;
     color: #0f1b27;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     font-family: "Instrument Serif", serif;
     border-radius: 10px;
 }
