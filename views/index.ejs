@@ -1,0 +1,60 @@
+
+<%- include("partials/header.ejs") %>
+
+<!-- <h1>welcome to blog application</h1> -->
+<div class="home">
+    <div class="create-blog">
+        <div class="create-head">
+            <h2>Surf the web with your words</h2>
+            <h5>Create a unique and beautiful blog easily.</h5>
+        </div>
+        <div class="create-form">
+            
+            <div class="create-btn">
+                <a href="/form" class="create-btn-a" id="create-blog">Create Your Blog
+                    <!-- <i class="fa-solid fa-plus"></i> -->
+                </a>
+            </div>
+        </div>
+
+    </div>
+    
+</div>
+<div class="blogs">
+    <div class="blog">
+        <% if(locals.title){ %>
+            <!-- <div class="left-blog">
+                <img src="" alt="">
+            </div> -->
+            <div class="right-blog">
+                <h3><%= artData.title %>title</h3>
+            <h5><%= artData.markdown %>sdghhj</h5>
+            <p><%= artData.description %>gyvuhbijn</p>
+
+
+            </div>
+            <% } %>
+            
+    </div>
+    <div class="blog">
+        
+            <!-- <div class="left-blog">
+                <img src="" alt="">
+            </div> -->
+            <div class="right-blog">
+                <h3>title</h3>
+            <h5>sdghhj</h5>
+            <p>gyvuhbijn Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi tempore accusamus eaque quasi, eius soluta neque harum eligendi nam laboriosam fugiat dolorem quo quibusdam incidunt voluptatem ab illum sunt. Maxime voluptatibus, consectetur facilis quasi illum vel quaerat magnam doloremque assumenda similique explicabo dolor nam recusandae eligendi nisi reiciendis qui consequatur adipisci rem sint. Aut accusantium voluptate dolore impedit provident nostrum minima delectus quos, ipsum libero eligendi laborum totam praesentium facilis placeat perspiciatis quia et ratione odit? Delectus reiciendis tenetur vitae qui magni assumenda omnis est, doloribus cum! Odit, at accusamus molestiae autem itaque quod voluptas? Tempore eum ipsa asperiores officiis?</p>
+
+
+            </div>
+            
+    </div>
+    
+    
+    </h2>
+</div>
+
+
+
+<%- include("partials/footer.ejs") %>

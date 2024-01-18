@@ -1,0 +1,13 @@
+<div class="blog1">
+        <h2>
+            <%= title %>
+            
+        </h2>
+        <h4>
+            <%= markdown %>
+        </h4>
+        <p>
+            <%= content %>
+        </p>
+    </div>
+    <div class="blog2"></div>

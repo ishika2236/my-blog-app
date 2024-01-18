@@ -1,0 +1,42 @@
+<%- include("partials/header.ejs") %>
+
+<div class="form-fields">
+    <form action="./" class="form-inputs" method="post">
+        <div class="form-sections">
+            <div class="left-section">
+                <label for="image"></label><br>
+                <input type="file" name="image" id="image" placeholder="Upload Image">
+                
+        
+            </div>
+            <div class="right-section">
+    
+                <div class="form-title">
+                    <label for="title">Title</label><br>
+                    <input class="type-text" placeholder="Blog Title" name="title" id="title" type="text">
+                </div>
+                <div class="form-markdown">
+                    <label for="markdown">Markdown</label><br>
+                    <input class="type-markdown" placeholder="Blog Markdown" name="markdown" id="markdown" type="text">
+                </div>
+                <div class="form-description">
+                    <label for="description">Description</label><br>
+                    <input class="type-description" placeholder="Blog Description"  type="textbox" name="description" id="description" width="90" height="30">
+                </div>
+                <div class="form-buttons">
+                    <a href="/">Cancel</a>
+                    <button>Submit</button>
+                </div>
+        
+            </div>
+
+        </div>
+        
+
+    </form>
+    
+    
+</div>
+
+
+<%- include("partials/footer.ejs") %>
