@@ -24,7 +24,7 @@ Before you begin, ensure you have met the following requirements:
    git clone https://github.com/ishika2236/my-blog-app.git
    ```
 
-```
+
 
 2. Install the dependencies:
    ```
