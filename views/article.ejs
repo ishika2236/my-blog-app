@@ -1,13 +1,21 @@
-<%- include('partials/header.ejs') %>
+<%- include("partials/header.ejs") %>
 
+<div class="article">
+    <% if(locals.blog){ %>
+        <h1><%= blog.title %></h1>
+        <div class="article-content">
+            <%- blog.markdown %>
+        </div>
+        <p class="article-description"><%= blog.description %></p>
+        <div class="article-actions">
+            <a href="/articles/<%= blog.id %>/edit">Edit</a>
+            <form action="/articles/<%= blog.id %>/delete" method="post" style="display:inline;">
+                <button type="submit" onclick="return confirm('Are you sure you want to delete this blog?')">Delete</button>
+            </form>
+        </div>
+    <% } else { %>
+        <p>Blog not found.</p>
+    <% } %>
+</div>
 
-
-  
-
-
-
-
-
-
-
-<%- include('partials/footer.ejs') %>
+<%- include("partials/footer.ejs") %>

@@ -1,7 +1,5 @@
-
 <%- include("partials/header.ejs") %>
 
-<!-- <h1>welcome to blog application</h1> -->
 <div class="home">
     <div class="create-blog">
         <div class="create-head">
@@ -9,37 +7,28 @@
             <h5>Create a unique and beautiful blog easily.</h5>
         </div>
         <div class="create-form">
-            
             <div class="create-btn">
-                <a href="/form" class="create-btn-a" id="create-blog">Create Your Blog
-                    <!-- <i class="fa-solid fa-plus"></i> -->
-                </a>
+                <a href="/articles/new" class="create-btn-a" id="create-blog">Create Your Blog</a>
             </div>
         </div>
-
     </div>
-    
 </div>
+
 <div class="blogs">
-    <div class="blog">
-        <% if(locals.artData){ %>
-            <!-- <div class="left-blog">
-                <img src="" alt="">
-            </div> -->
-            <div class="right-blog">
-                <h3><%= artData.t %></h3>
-                <h5><%= artData.m %></h5>
-                <p><%= artData.d %></p>
+    <h2>Recent Blogs</h2>
+    <% if(locals.blogs && blogs.length > 0){ %>
+        <% blogs.forEach(function(blog) { %>
+            <div class="blog">
+                <div class="right-blog">
+                    <h3><%= blog.title %></h3>
+                    <p><%= blog.description %></p>
+                    <a href="/articles/<%= blog.id %>">Read More</a>
+                </div>
             </div>
-            <% } %>
-            
-    </div>
-    
-    
-    
-    </h2>
+        <% }); %>
+    <% } else { %>
+        <p>No blogs available.</p>
+    <% } %>
 </div>
-
-
 
 <%- include("partials/footer.ejs") %>
